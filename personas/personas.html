@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>营销达人风采展示</title>
+<!--设置是否为缩放模式 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 新 Bootstrap 核心 CSS 文件 --> 
+<!-- <link rel="stylesheet" type="text/css" href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css"> -->
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 --> 
+<script src="js/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 --> 
+<script src="js/bootstrap.min.js"></script>
+<!--echarts JS-->
+<script src="js/echarts.min.js"></script>
+<!-- 轮播swiper文件 -->
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+<!--界面样式-->
+<!-- <script src="js/personas.js"></script> -->
+<link rel="stylesheet" type="text/css" href="css/personas.css">
+
+</head>
+<body class="ksh">	
+	<div class="visual">
+        <div class="visual_box">
+			<div class="visual_title">
+				<span>基本信息</span>
+				<img src="images/ksh33.png">
+			</div>
+			<div class="base">
+				<div class="avatar">
+                    <img src="images/192.png" title="保罗酱"/>
+                </div>
+                <div class="info">
+                    <p style="color:#7FFFD4;font-weight:bold;">姓名： 张小花</p>
+                    <p style="color:#7FFFD4;font-weight:bold;">机构： XXXX网点</p>
+                    <p style="color:#7FFFD4;font-weight:bold;">管户： 456人</p>
+                </div>
+			</div>
+		</div>
+		<div class="visual_box">
+			<div class="visual_title">
+				<span>能力图谱</span>
+				<img src="images/ksh33.png">
+			</div>
+			<div class="swiper-container visual_chart">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"  id="radarChart"></div>
+				</div>
+			</div>
+		</div>
+        <div class="visual_box">
+			<div class="visual_title">
+				<span>数据明细</span>
+				<img src="images/ksh33.png">
+			</div>
+			<div>
+				<table class="table3">
+                    <thead>
+                        <tr>
+                            <th>项目</th>
+                            <th>个人得分</th>
+                            <th>支行均值</th>
+                            <th>排名</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tList">
+                        <tr>
+                            <td>拓户</td>
+                            <td>60</td>
+                            <td>50</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>产品</td>
+                            <td>85</td>
+                            <td>80</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>活客</td>
+                            <td>40</td>
+                            <td>65</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>吸金</td>
+                            <td>75</td>
+                            <td>70</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>销售</td>
+                            <td>90</td>
+                            <td>90</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>创收</td>
+                            <td>80</td>
+                            <td>85</td>
+                            <td>14</td>
+                        </tr>
+                    </tbody>
+                </table>
+			</div>
+		</div>
+	</div>	
+
+
+	<script type="text/javascript">
+
+        option = {
+            color: ['#67F9D8', '#FFE434', '#56A3F1', '#FF917C', '#f79c19', '#e9df3d'],
+            legend: {
+                textStyle:{
+                    fontSize:12,
+                    color: '#ffffff'
+                },
+                orient: 'vertical',
+                x:'right',
+                y: 'top',
+                data: ['支行平均', '个人评分']
+            },
+            radar: {
+                    name: {
+                        textStyle: {
+                            color: '#fff',
+                            fontSize:15,
+                            borderRadius: 3
+                        }
+                    },
+                    indicator: [
+                        { name: '拓户', max: 100, min: 30 },
+                        { name: '产品', max: 100, min: 30 },
+                        { name: '活客', max: 100, min: 30 },
+                        { name: '吸金', max: 100, min: 30 },
+                        { name: '销售', max: 100, min: 30 },
+                        { name: '创收', max: 100, min: 30 }
+                    ],
+                    // center: ['25%', '50%'],
+                    radius: "75%",
+                    startAngle: 90,
+                    splitNumber: 5,
+                    // shape: 'circle',
+                    axisLine: {
+                        lineStyle: {
+                            color: 'rgba(211, 253, 250, 0.8)'
+                        }
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: 'rgba(211, 253, 250, 0.8)'
+                        }
+                    }   
+            },
+            
+            series: [
+                {
+                    type: 'radar',
+                    emphasis: {
+                        lineStyle: {
+                            width: 6
+                        }
+                    },
+                    data: [
+                        {
+                            value: [50, 80, 65, 70, 90, 85],
+                            name: '支行平均'
+                        },
+                        {
+                            value: [60, 85, 40, 75, 90, 80],
+                            name: '个人评分',
+                            areaStyle: {
+                                color: 'rgba(255, 228, 52, 0.6)'
+                            }
+                        }
+                    ]
+                }
+                
+            ]
+        };
+
+	
+        var myChart3 = echarts.init(document.getElementById('radarChart'));
+        myChart3.setOption(option);
+        
+    
+	</script>
+</body>
+</html>
