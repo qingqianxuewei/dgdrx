@@ -97,7 +97,11 @@ html, body, form{overflow-y:auto;height:100%;}
 
 .info{
 	float:right;
-	margin-top:40px;
-	margin-right: 60px;
+	margin-top:15px;
+	margin-right: 70px;
+}
+
+.info p{
+	margin-top: 10px;
 }
 
