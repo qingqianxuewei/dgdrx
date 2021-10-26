@@ -183,3 +183,9 @@
     }
     
 })();
+
+
+
+function queryOne(){
+    window.location.href="personas.html"
+}

@@ -6,7 +6,16 @@ a{text-decoration:none !important;}
 html, body, form{overflow-y:auto;height:100%;}
 
 
-.ksh{height:100%;padding:15px;background:url(../images/data08.png) no-repeat #061537;background-size:cover;overflow:hidden;position:relative;z-index:-2;}
+.ksh{
+    height:100%;
+    padding:15px;
+    background:url(../images/demo-1-bg.jpg) no-repeat #061537;
+    background-size:cover;
+    background-position: center center;
+    overflow:hidden;
+    position:relative;
+    z-index:-2;
+}
 
 .visual{height:calc(100% - 33px);padding-top:10px;}
 
