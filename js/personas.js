@@ -1,6 +1,6 @@
 // //能力图谱
 option = {
-    color: ['#67F9D8', '#FFE434', '#56A3F1', '#FF917C', '#f79c19', '#e9df3d'],
+    color: ['#67F9D8', '#FFE434', '#56A3F1', '#FF917C', '#f79c19'],
     legend: {
         textStyle:{
             fontSize:12,
@@ -24,8 +24,7 @@ option = {
                 { name: '产品', max: 100, min: 30 },
                 { name: '活客', max: 100, min: 30 },
                 { name: '吸金', max: 100, min: 30 },
-                { name: '销售', max: 100, min: 30 },
-                { name: '创收', max: 100, min: 30 }
+                { name: '销售', max: 100, min: 30 }
             ],
             // center: ['25%', '50%'],
             radius: "75%",
@@ -54,11 +53,11 @@ option = {
             },
             data: [
                 {
-                    value: [50, 80, 65, 70, 90, 85],
+                    value: [50, 80, 65, 70, 90],
                     name: '支行平均'
                 },
                 {
-                    value: [60, 85, 40, 75, 90, 80],
+                    value: [60, 85, 40, 75, 90],
                     name: '个人评分',
                     areaStyle: {
                         color: 'rgba(255, 228, 52, 0.6)'
