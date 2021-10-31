@@ -111,9 +111,9 @@ html, body, form{overflow-y:auto;height:100%;}
 }
 
 .info{
-	float:right;
+	float:left;
 	margin-top:8px;
-	margin-right: 70px;
+	margin-left: 25px;
 }
 
 .info p{

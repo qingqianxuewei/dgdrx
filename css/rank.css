@@ -15,6 +15,22 @@ div {
 	font-family: '微软雅黑';
 }
 
+body,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+}
+
 div {
 	font-family: '微软雅黑';
 	font-size: 16;
@@ -29,17 +45,6 @@ a {
 	text-decoration: none !important;
 }
 
-.clear {
-	clear: both;
-}
-
-html,
-body,
-form {
-	overflow-y: auto;
-	height: 100%;
-}
-
 .bg {
 	height:100%;
     padding:15px;
@@ -51,16 +56,24 @@ form {
     z-index:-2;
 }
 
-
 .logo_box img{
 	width:100%;
 	margin-bottom: 10px;
 }
 
-
 .menu {
 	width: 100%;
+	height: calc(100vh - 180px);
 	margin: 0px 0  30px 0;
+	display: block;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.menu::-webkit-scrollbar {
+	display: none;
 }
 
 .menu ul {
@@ -99,17 +112,17 @@ form {
 
 .menu ul li a h3 {
 	display: block;
-	text-align: left;
-	padding: 0 0 0 5px;
+	text-align: center;
 	font-size: 24px;
 	line-height: 35px;
 	float: left;
-	width: 24px;
+	width: 35px;
 }
 
 .menu ul li img {
 	display: block;
-	width: 24px;
+	max-width: 35px;
 	max-height: 35px;
-	float: left;
+	float: center;
+	margin:0 auto;
 }
