@@ -5,10 +5,15 @@ a{text-decoration:none !important;}
 .clear{clear:both;}
 html, body, form{overflow-y:auto;height:100%;}
 
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
 
 .ksh{
     height:100%;
-    padding:15px;
     background:url(../images/demo-1-bg.jpg) no-repeat #061537;
     background-size:cover;
     background-position: center center;
@@ -18,8 +23,15 @@ html, body, form{overflow-y:auto;height:100%;}
 }
 
 .visual {
-    height: calc(100% - 33px);
-    padding-top: 10px;
+    height: calc(100vh-20px);
+    padding-top: 20px;
+    overflow: auto;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.visual::-webkit-scrollbar {
+    display: none;
 }
 
 .visual_box {
