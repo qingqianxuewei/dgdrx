@@ -68,11 +68,11 @@ function showChart(item){
                     }
                 },
                 indicator: [
-                    { name: '拓户', max: 100, min: 30 },
-                    { name: '产品', max: 100, min: 30 },
-                    { name: '活客', max: 100, min: 30 },
-                    { name: '吸金', max: 100, min: 30 },
-                    { name: '销售', max: 100, min: 30 }
+                    { name: '拓户', max: 165, min: 0 },
+                    { name: '产品', max: 30, min: 0 },
+                    { name: '活客', max: 539, min: 236 },
+                    { name: '吸金', max: 770, min: 580 },
+                    { name: '销售', max: 24, min: 0 }
                 ],
                 // center: ['25%', '50%'],
                 radius: "75%",
@@ -101,11 +101,11 @@ function showChart(item){
                 },
                 data: [
                     {
-                        value: [50, 80, 65, 70, 90],
+                        value: [79, 7.3, 424.3, 662, 6.9],
                         name: '支行平均'
                     },
                     {
-                        value: [60, 85, 40, 75, 90],
+                        value: item.scores,
                         name: '个人评分',
                         areaStyle: {
                             color: 'rgba(255, 228, 52, 0.6)'
@@ -117,11 +117,53 @@ function showChart(item){
         ]
     };
 
+
+
+
+
     var myChart = echarts.init(document.getElementById('radarChart'));
     myChart.setOption(option);
 
 }
 
 function showTable(item){
+
+    scores = item.scores
+    ranks = item.ranks
+
+    $("#tList").html('')
+    let itemHtml = ''
+    itemHtml += '<tr><td>拓户</td>' 
+    itemHtml += '<td>'+scores[0]+'</td>' 
+    itemHtml += '<td>79</td>'
+    itemHtml += '<td>'+ranks[0]+'</td>'
+    itemHtml += '</tr>' 
+
+    itemHtml += '<tr><td>产品</td>' 
+    itemHtml += '<td>'+scores[1]+'</td>' 
+    itemHtml += '<td>7.3</td>'
+    itemHtml += '<td>'+ranks[1]+'</td>'
+    itemHtml += '</tr>' 
+
+    itemHtml += '<tr><td>活客</td>' 
+    itemHtml += '<td>'+scores[2]+'</td>' 
+    itemHtml += '<td>424.3</td>'
+    itemHtml += '<td>'+ranks[2]+'</td>'
+    itemHtml += '</tr>' 
+
+    itemHtml += '<tr><td>吸金</td>' 
+    itemHtml += '<td>'+scores[3]+'</td>' 
+    itemHtml += '<td>662</td>'
+    itemHtml += '<td>'+ranks[3]+'</td>'
+    itemHtml += '</tr>' 
+
+    itemHtml += '<tr><td>销售</td>' 
+    itemHtml += '<td>'+scores[4]+'</td>' 
+    itemHtml += '<td>6.9</td>'
+    itemHtml += '<td>'+ranks[4]+'</td>'
+    itemHtml += '</tr>' 
+
+    $("#tList").append(itemHtml)
+
 
 }
