@@ -110,4 +110,12 @@ dataFunctionCallbackPersonas([{
 	"score": 1093,
 	"scores": [70, 0, 373, 650, 0],
 	"ranks": [8, 7, 12, 8, 11]
+}, {
+	"id": "015",
+	"name": "李嘉郴",
+	"org": "支行营业部",
+	"rank": 3,
+	"score": 1340,
+	"scores": [105, 30, 455, 750, 0],
+	"ranks": [4, 1, 7, 3, 11]
 }])
