@@ -4,7 +4,7 @@ function backToRank(){
 }
 
 
-function dataFunctionCallbackPersonas(result){
+function dataFunctionCallbackRank(result){
     console.log("数据加载成功")
     console.log(result.length)
 
@@ -70,8 +70,8 @@ function showChart(item){
                 indicator: [
                     { name: '拓户', max: 165, min: 0 },
                     { name: '产品', max: 30, min: 0 },
-                    { name: '活客', max: 539, min: 236 },
-                    { name: '吸金', max: 770, min: 580 },
+                    { name: '活客', max: 531, min: 236 },
+                    { name: '吸金', max: 300, min: 200 },
                     { name: '销售', max: 24, min: 0 }
                 ],
                 // center: ['25%', '50%'],
@@ -101,7 +101,7 @@ function showChart(item){
                 },
                 data: [
                     {
-                        value: [79, 7.3, 424.3, 662, 6.9],
+                        value: [79, 7.3, 424.3, 236.7, 6.9],
                         name: '支行平均'
                     },
                     {

@@ -38,7 +38,7 @@ function showRank(itemList){
         }else{
             itemHtml += '<span>'+ item.name +'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'
         }
-        itemHtml += '<span style="font-size: 12px;">'+ item.org +'</span>'   
+        itemHtml += '<span style="font-size: 12px;">'+ item.org.replace('支行','') +'</span>'   
         itemHtml += '<span style="color: #fcd862;float: right;font-weight: 800;">'+ item.score +'</span></a>'   
         itemHtml += '</li>'
     }
