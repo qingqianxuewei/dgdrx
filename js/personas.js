@@ -68,10 +68,10 @@ function showChart(item){
                     }
                 },
                 indicator: [
-                    { name: '拓户', max: 165, min: 0 },
-                    { name: '产品', max: 30, min: 0 },
-                    { name: '活客', max: 531, min: 236 },
-                    { name: '吸金', max: 300, min: 200 },
+                    { name: '拓户', max: 280, min: 25 },
+                    { name: '产品', max: 130, min: 0 },
+                    { name: '活客', max: 685, min: 541 },
+                    { name: '吸金', max: 300, min: 180 },
                     { name: '销售', max: 24, min: 0 }
                 ],
                 // center: ['25%', '50%'],
@@ -101,7 +101,7 @@ function showChart(item){
                 },
                 data: [
                     {
-                        value: [79, 7.3, 424.3, 236.7, 6.9],
+                        value: [173, 45, 624, 232, 7],
                         name: '支行平均'
                     },
                     {
@@ -118,9 +118,6 @@ function showChart(item){
     };
 
 
-
-
-
     var myChart = echarts.init(document.getElementById('radarChart'));
     myChart.setOption(option);
 
@@ -135,31 +132,31 @@ function showTable(item){
     let itemHtml = ''
     itemHtml += '<tr><td>拓户</td>' 
     itemHtml += '<td>'+scores[0]+'</td>' 
-    itemHtml += '<td>79</td>'
+    itemHtml += '<td>173</td>'
     itemHtml += '<td>'+ranks[0]+'</td>'
     itemHtml += '</tr>' 
 
     itemHtml += '<tr><td>产品</td>' 
     itemHtml += '<td>'+scores[1]+'</td>' 
-    itemHtml += '<td>7.3</td>'
+    itemHtml += '<td>45</td>'
     itemHtml += '<td>'+ranks[1]+'</td>'
     itemHtml += '</tr>' 
 
     itemHtml += '<tr><td>活客</td>' 
     itemHtml += '<td>'+scores[2]+'</td>' 
-    itemHtml += '<td>424.3</td>'
+    itemHtml += '<td>624</td>'
     itemHtml += '<td>'+ranks[2]+'</td>'
     itemHtml += '</tr>' 
 
     itemHtml += '<tr><td>吸金</td>' 
     itemHtml += '<td>'+scores[3]+'</td>' 
-    itemHtml += '<td>662</td>'
+    itemHtml += '<td>232</td>'
     itemHtml += '<td>'+ranks[3]+'</td>'
     itemHtml += '</tr>' 
 
     itemHtml += '<tr><td>销售</td>' 
     itemHtml += '<td>'+scores[4]+'</td>' 
-    itemHtml += '<td>6.9</td>'
+    itemHtml += '<td>7</td>'
     itemHtml += '<td>'+ranks[4]+'</td>'
     itemHtml += '</tr>' 
 
