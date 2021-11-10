@@ -62,7 +62,7 @@ a {
 
 .menu {
 	width: 100%;
-	height: calc(100vh - 180px);
+	height: calc(100vh - 230px);
 	margin: 0px 0  30px 0;
 	display: block;
 	overflow: auto;
