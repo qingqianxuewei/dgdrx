@@ -15,12 +15,6 @@ function dataTotalFunctionCallbackRank(result){
     avg_list = result.avg_list
     max_list = result.max_list
     min_list = result.min_list
-
-    console.log(max_list[1])
-    console.log(max_list[2])
-    console.log(max_list[3])
-    console.log(max_list[4])
-    console.log(max_list[5])
 }
 
 function dataFunctionCallbackRank(result){
