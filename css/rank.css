@@ -137,7 +137,7 @@ a {
 	font-size: 14px;
 	font-weight: 800;
 	color: #fcad78;
-	padding-left: 33%;
+	padding-left: 50%;
 	padding-bottom: 5px;
 	-webkit-animation:textannimate 2s;
 }
@@ -148,7 +148,7 @@ a {
 	}
 
 	to {
-		padding-left: 33%;
+		padding-left: 50%;
 	}
 }
 
@@ -158,7 +158,7 @@ a {
 	}
 
 	to {
-		padding-left: 33%;
+		padding-left: 50%;
 	}
 }
 
@@ -169,7 +169,7 @@ a {
 }
 
 .expand {
-	width: 33%;
+	width: 50%;
 	height: 2px;
 	/* margin: 2px 0; */
 	background: #156eb3;
@@ -183,7 +183,7 @@ a {
 		width: 0;
 	}
 	to {
-		width: 33%;
+		width: 50%;
 	}
 }
 
@@ -192,6 +192,6 @@ a {
 		width: 0;
 	}
 	to {
-		width: 33%;
+		width: 50%;
 	}
 }

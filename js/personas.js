@@ -3,6 +3,25 @@ function backToRank(){
     window.location.href="rank.html"
 }
 
+avg_list = []
+max_list = []
+min_list = []
+
+
+function dataTotalFunctionCallbackRank(result){
+    console.log("数据加载成功")
+    console.log(result)
+
+    avg_list = result.avg_list
+    max_list = result.max_list
+    min_list = result.min_list
+
+    console.log(max_list[1])
+    console.log(max_list[2])
+    console.log(max_list[3])
+    console.log(max_list[4])
+    console.log(max_list[5])
+}
 
 function dataFunctionCallbackRank(result){
     console.log("数据加载成功")
@@ -25,6 +44,7 @@ function dataFunctionCallbackRank(result){
        
     for(let i=0;i<result.length;i++){
         if(id == result[i].id){
+            console.log(result[i])
             showInfo(result[i])
             showChart(result[i])
             showTable(result[i])
@@ -32,6 +52,9 @@ function dataFunctionCallbackRank(result){
         }
     }
 }
+
+
+
 
 function showInfo(item){
 
@@ -68,11 +91,11 @@ function showChart(item){
                     }
                 },
                 indicator: [
-                    { name: '拓户', max: 280, min: 25 },
-                    { name: '产品', max: 130, min: 0 },
-                    { name: '活客', max: 685, min: 541 },
-                    { name: '吸金', max: 300, min: 180 },
-                    { name: '销售', max: 24, min: 0 }
+                    { name: '拓户', max: max_list[1], min: min_list[1] },
+                    { name: '产品', max: max_list[2], min: min_list[2] },
+                    { name: '活客', max: max_list[3], min: min_list[3] },
+                    { name: '吸金', max: max_list[4], min: min_list[4] },
+                    { name: '销售', max: max_list[5], min: min_list[5] }
                 ],
                 // center: ['25%', '50%'],
                 radius: "75%",
@@ -101,7 +124,7 @@ function showChart(item){
                 },
                 data: [
                     {
-                        value: [173, 45, 624, 232, 7],
+                        value: avg_list.slice(1),
                         name: '支行平均'
                     },
                     {
@@ -132,31 +155,31 @@ function showTable(item){
     let itemHtml = ''
     itemHtml += '<tr><td>拓户</td>' 
     itemHtml += '<td>'+scores[0]+'</td>' 
-    itemHtml += '<td>173</td>'
+    itemHtml += '<td>'+avg_list[1]+'</td>'
     itemHtml += '<td>'+ranks[0]+'</td>'
     itemHtml += '</tr>' 
 
     itemHtml += '<tr><td>产品</td>' 
     itemHtml += '<td>'+scores[1]+'</td>' 
-    itemHtml += '<td>45</td>'
+    itemHtml += '<td>'+avg_list[2]+'</td>'
     itemHtml += '<td>'+ranks[1]+'</td>'
     itemHtml += '</tr>' 
 
     itemHtml += '<tr><td>活客</td>' 
     itemHtml += '<td>'+scores[2]+'</td>' 
-    itemHtml += '<td>624</td>'
+    itemHtml += '<td>'+avg_list[3]+'</td>'
     itemHtml += '<td>'+ranks[2]+'</td>'
     itemHtml += '</tr>' 
 
     itemHtml += '<tr><td>吸金</td>' 
     itemHtml += '<td>'+scores[3]+'</td>' 
-    itemHtml += '<td>232</td>'
+    itemHtml += '<td>'+avg_list[4]+'</td>'
     itemHtml += '<td>'+ranks[3]+'</td>'
     itemHtml += '</tr>' 
 
     itemHtml += '<tr><td>销售</td>' 
     itemHtml += '<td>'+scores[4]+'</td>' 
-    itemHtml += '<td>7</td>'
+    itemHtml += '<td>'+avg_list[5]+'</td>'
     itemHtml += '<td>'+ranks[4]+'</td>'
     itemHtml += '</tr>' 
 
