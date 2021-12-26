@@ -1,0 +1,121 @@
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+body {
+    background: #fff;
+    color: #383a3c;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.25;
+    font-family: 'Raleway', Calibri, Arial, sans-serif;
+}
+
+/* Header */
+.large-header {
+    position: relative;
+    width: 100%;
+    background: #333;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    z-index: 1;
+}
+
+.demo-1 .large-header {
+    background-image: url('../images/demo-1-bg.jpg');
+}
+
+.logo_box {
+    width: 400px;
+    height: 500px;
+    padding: 35px;
+    color: #EEE;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -250px;
+}
+
+.logo_box h3 {
+    text-align: center;
+    height: 20px;
+    font: 20px "microsoft yahei", Helvetica, Tahoma, Arial, "Microsoft jhengHei", sans-serif;
+    color: #FFFFFF;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 0 35px 0;
+}
+
+@keyframes sheen {
+    0% {
+        transform: skewY(-45deg) translateX(0);
+    }
+
+    100% {
+        transform: skewY(-45deg) translateX(12.5em);
+    }
+}
+
+.wrapper {
+    display: block;
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    margin-top: 30px;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    padding: 0.6em 1.8em;
+    text-align: center;
+    text-decoration: none;
+    color: #2194E0;
+    border: 2px solid #2194E0;
+    font-size: 18px;
+    display: inline-block;
+    border-radius: 0.3em;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.button:before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    transform: skewX(-45deg) translateX(0);
+    transition: none;
+}
+
+.button:hover {
+    background-color: #2194E0;
+    color: #fff;
+    border-bottom: 4px solid darken(#2194E0, 10%);
+}
+
+.button:hover:before {
+    transform: skewX(-45deg) translateX(13.5em);
+    transition: all 0.5s ease-in-out;
+}
