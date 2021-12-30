@@ -1,8 +1,4 @@
 
-function backToRank(){
-    window.location.href="rank.html"
-}
-
 avg_list = []
 max_list = []
 min_list = []
@@ -12,13 +8,14 @@ function dataTotalFunctionCallbackRank(result){
     console.log("数据加载成功")
     console.log(result)
 
-    avg_list = result.avg_list
-    max_list = result.max_list
-    min_list = result.min_list
+    avg_list = result.person.avg_list
+    max_list = result.person.max_list
+    min_list = result.person.min_list
 }
 
 function dataFunctionCallbackRank(result){
     console.log("数据加载成功")
+    result = result.person
     console.log(result.length)
 
     var url = location.search

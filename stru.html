@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>明细</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/personas.css">
+
+</head>
+<body class="bg">
+	<div class="container">
+		<div class="content">
+			<div class="visual">
+				<div class="visual_box">
+					<!-- <img style="width:100px; display: inline; float: right;margin-top: -10px;" src="images/ranktext.png"> -->
+					<div class="visual_title">
+						<span>基本信息</span>
+						<img src="images/ksh33.png">     
+					</div>
+					<div class="base">
+						<div class="info" id="itemInfo">
+						</div>
+					</div>
+				</div>
+				<div class="visual_box">
+					<div class="visual_title">
+						<span>能力图谱</span>
+						<img src="images/ksh33.png">
+					</div>
+					<div class="swiper-container visual_chart">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"  id="radarChart"></div>
+						</div>
+					</div>
+				</div>
+		
+				<div class="visual_box">
+					<div class="visual_title">
+						<span>项目得分</span>
+						<img src="images/ksh33.png">
+					</div>
+					<div>
+						<table class="table3">
+							<thead>
+								<tr>
+									<th>项目</th>
+									<th>网点得分</th>
+									<th>支行均值</th>
+									<th>排名</th>
+								</tr>
+							</thead>
+							<tbody id="tList">   
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="visual_box">
+					<div class="visual_title">
+						<span>战绩说明</span>
+						<img src="images/ksh33.png">
+					</div>
+					<div>
+						<table class="table3">
+							<thead>
+								<tr>
+									<th width="20%">项目</th>
+									<th>战绩明细</th>
+								</tr>	
+							</thead>
+							<tbody id="detail">  
+								<tr>
+									<td>拓户</td>
+									<td>战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细</td>
+								</tr>
+								<tr>
+									<td>产品</td>
+									<td>战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细</td>
+								</tr>
+								<tr>
+									<td>活客</td>
+									<td>战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细</td>
+								</tr>
+								<tr>
+									<td>吸金</td>
+									<td>战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细</td>
+								</tr>
+								<tr>
+									<td>销售</td>
+									<td>战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细</td>
+								</tr> 
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>	
+	
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/stru.js?ver=20211230"></script>
+	<script type="text/javascript" src="data/total.json?callback=dataTotalFunctionCallbackRank&ver=20211128"></script>
+    <script type="text/javascript" src="data/rank.json?callback=dataFunctionCallbackRank&ver=20211128"></script>
+	
+    
+</body>
+</html>

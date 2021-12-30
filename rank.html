@@ -4,25 +4,24 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
-<title>旺季营销排行榜</title>
+<title>排行榜</title>
 <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 <link rel="stylesheet" type="text/css" href="css/demo.css" />
-<link rel="stylesheet" type="text/css" href="css/rank.css" />
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/rank.css" />                                                                                
+
 </head>
-	<body class="bg">
+	<body class="bg" style="padding: 15px;">
 		<div class="container">
 			<div class="content">
 				<div class="logo_box">
 					<div>
-						<img src="images/ranklogo3.png" title=""/>
+						<a href="index.html"><img src="images/ranklogo5.png" title=""/></a>
 					</div>	
 				</div>
-				<div class="middle">
-					<p>2021.11.25</p>
-					<div class="bar">
-						<span class="expand"></span>
-					</div>
-				</div>
+				<!-- <div>
+					<span style="font-size: 16px;color: azure;margin-left: 2em;">评分排行榜（截至2022-01-31）</span>
+				</div> -->
 				<div class="menu">
 					<ul id = "itemList">
 					</ul>
@@ -30,7 +29,7 @@
 			</div>
 		</div>
 		<script src="js/jquery.min.js"></script>
-		<script src="js/rank.js"></script>
+		<script src="js/rank.js?ver=20211230"></script>
 		<script type="text/javascript" src="data/rank.json?callback=dataFunctionCallbackRank&ver=20211107"></script>
 	</body>
 </html>

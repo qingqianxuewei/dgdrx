@@ -1,29 +1,7 @@
-a,p,h1,h2,h3,h4,h5,h6,body,span,label,div{padding:0;margin:0;font-family:'微软雅黑';}
-div{font-family:'微软雅黑';font-size: 16;}
-ul{padding:0;margin:0;}
-a{text-decoration:none !important;}
-.clear{clear:both;}
-html, body, form{overflow-y:auto;height:100%;}
-
-body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-}
-
-
-.ksh{
-    height:100%;
-    background:url(../images/demo-1-bg.jpg) no-repeat #061537;
-    background-size:cover;
-    background-position: center center;
-    overflow:hidden;
-    position:relative;
-    z-index:-2;
-}
 
 .visual {
-    height: calc(100vh-20px);
+    height: calc(100vh - 30px);
+    /* height: 600px; */
     padding-top: 20px;
     overflow: auto;
     justify-content: center;

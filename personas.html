@@ -2,97 +2,112 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>营销达人风采展示</title>
-<!--设置是否为缩放模式 -->
+<title>明细</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 新 Bootstrap 核心 CSS 文件 --> 
-<!-- <link rel="stylesheet" type="text/css" href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css"> -->
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 --> 
 <script src="js/jquery.min.js"></script>
-<!-- 最新的 Bootstrap 核心 JavaScript 文件 --> 
 <script src="js/bootstrap.min.js"></script>
-<!--echarts JS-->
 <script src="js/echarts.min.js"></script>
-<!-- 轮播swiper文件 -->
-<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 <script src="js/swiper.min.js"></script>
-<!--界面样式-->
-<!-- <script src="js/personas.js"></script> -->
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/common.css" />
 <link rel="stylesheet" type="text/css" href="css/personas.css">
 
 </head>
-<body class="ksh">	
-	<div class="visual">
-        <div class="visual_box">
-            <img style="width:100px; display: inline; float: right;margin-top: -20px;" src="images/ranktext.png" onclick="javascript:backToRank();">
-			<div class="visual_title">
-				<span>基本信息</span>
-                <img src="images/ksh33.png">     
-			</div>
-			<div class="base">
-				<div class="avatar">
-                    <img src="images/192.png" title="保罗酱"/>
-                </div>
-                <div class="info" id="itemInfo">
-                </div>
-			</div>
-		</div>
-		<div class="visual_box">
-			<div class="visual_title">
-				<span>能力图谱</span>
-				<img src="images/ksh33.png">
-			</div>
-			<div class="swiper-container visual_chart">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide"  id="radarChart"></div>
+<body class="bg">
+	<div class="container">
+		<div class="content">
+			<div class="visual">
+				<div class="visual_box">
+					<!-- <img style="width:100px; display: inline; float: right;margin-top: -10px;" src="images/ranktext.png" onclick="javascript:backToRank();"> -->
+					<div class="visual_title">
+						<span>基本信息</span>
+						<img src="images/ksh33.png">     
+					</div>
+					<div class="base">
+						<div class="avatar">
+							<img src="images/192.png" title="保罗酱"/>
+						</div>
+						<div class="info" id="itemInfo">
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-
-        <div class="visual_box">
-			<div class="visual_title">
-				<span>项目得分</span>
-				<img src="images/ksh33.png">
-			</div>
-			<div>
-				<table class="table3">
-                    <thead>
-                        <tr>
-                            <th>项目</th>
-                            <th>个人得分</th>
-                            <th>支行均值</th>
-                            <th>排名</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tList">   
-                    </tbody>
-                </table>
-			</div>
-		</div>
-		<div class="visual_box">
-			<div class="visual_title">
-				<span>我的战绩</span>
-				<img src="images/ksh33.png">
-			</div>
-			<div>
-				<table class="table3">
-                    <thead>
-                        <tr>
-                            <th>项目</th>
-                            <th>个人得分</th>
-                            <th>支行均值</th>
-                            <th>排名</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tList">   
-                    </tbody>
-                </table>
-			</div>
+				<div class="visual_box">
+					<div class="visual_title">
+						<span>能力图谱</span>
+						<img src="images/ksh33.png">
+					</div>
+					<div class="swiper-container visual_chart">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"  id="radarChart"></div>
+						</div>
+					</div>
+				</div>
+		
+				<div class="visual_box">
+					<div class="visual_title">
+						<span>项目得分</span>
+						<img src="images/ksh33.png">
+					</div>
+					<div>
+						<table class="table3">
+							<thead>
+								<tr>
+									<th>项目</th>
+									<th>个人得分</th>
+									<th>支行均值</th>
+									<th>排名</th>
+								</tr>
+							</thead>
+							<tbody id="tList">   
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="visual_box">
+					<div class="visual_title">
+						<span>战绩说明</span>
+						<img src="images/ksh33.png">
+					</div>
+					<div>
+						<table class="table3">
+							<thead>
+								<tr>
+									<th width="20%">项目</th>
+									<th>战绩明细</th>
+								</tr>	
+							</thead>
+							<tbody id="detail">  
+								<tr>
+									<td>拓户</td>
+									<td>战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细</td>
+								</tr>
+								<tr>
+									<td>产品</td>
+									<td>战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细</td>
+								</tr>
+								<tr>
+									<td>活客</td>
+									<td>战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细</td>
+								</tr>
+								<tr>
+									<td>吸金</td>
+									<td>战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细</td>
+								</tr>
+								<tr>
+									<td>销售</td>
+									<td>战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细战绩明细</td>
+								</tr> 
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>	
 		</div>
 	</div>	
+	
 
     <script src="js/jquery.min.js"></script>
-    <script src="js/personas.js"></script>
+    <script src="js/personas.js?ver=20211230"></script>
 	<script type="text/javascript" src="data/total.json?callback=dataTotalFunctionCallbackRank&ver=20211128"></script>
     <script type="text/javascript" src="data/rank.json?callback=dataFunctionCallbackRank&ver=20211128"></script>
 	
