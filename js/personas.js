@@ -39,6 +39,7 @@ function dataFunctionCallbackRank(result){
             showInfo(result[i])
             showChart(result[i])
             showTable(result[i])
+            showDesc(result[i])
             break
         }
     }
@@ -173,6 +174,38 @@ function showTable(item){
     itemHtml += '</tr>' 
 
     $("#tList").append(itemHtml)
+
+
+}
+
+
+function showDesc(item){
+
+    descs = item.descs
+
+    $("#detailList").html('')
+    let itemHtml = ''
+    itemHtml += '<tr><td>拓户</td>' 
+    itemHtml += '<td style="text-align:left;">'+descs[0]+'</td>' 
+    itemHtml += '</tr>' 
+
+    itemHtml += '<tr><td>产品</td>' 
+    itemHtml += '<td style="text-align:left;">'+descs[1]+'</td>'
+    itemHtml += '</tr>' 
+
+    itemHtml += '<tr><td>活客</td>' 
+    itemHtml += '<td style="text-align:left;">'+descs[2]+'</td>'
+    itemHtml += '</tr>' 
+
+    itemHtml += '<tr><td>吸金</td>' 
+    itemHtml += '<td style="text-align:left;">'+descs[3]+'</td>'
+    itemHtml += '</tr>' 
+
+    itemHtml += '<tr><td>销售</td>' 
+    itemHtml += '<td style="text-align:left;">'+descs[4]+'</td>'
+    itemHtml += '</tr>' 
+
+    $("#detailList").append(itemHtml)
 
 
 }

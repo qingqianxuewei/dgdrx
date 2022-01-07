@@ -64,6 +64,7 @@
 .table3 tr td,
 .table3 tr th {
     border-right: 1px solid #0e94ea;
+    border-top: 1px solid #0e94ea;
     height: 25px;
     /* line-height: 12px; */
     color: #cdddf7;

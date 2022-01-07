@@ -29,26 +29,33 @@ for i in range(2,17):
 
         scores = []
         scores.append(int(row_index[12].value))
-        scores.append(int(row_index[18].value))
-        scores.append(int(row_index[29].value))
-        scores.append(int(row_index[34].value))
-        scores.append(int(row_index[38].value))
+        scores.append(int(row_index[19].value))
+        scores.append(int(row_index[31].value))
+        scores.append(int(row_index[37].value))
+        scores.append(int(row_index[42].value))
 
         ranks = []
         ranks.append(int(row_index[13].value))
-        ranks.append(int(row_index[19].value))
-        ranks.append(int(row_index[30].value))
-        ranks.append(int(row_index[35].value))
-        ranks.append(int(row_index[39].value))
+        ranks.append(int(row_index[20].value))
+        ranks.append(int(row_index[32].value))
+        ranks.append(int(row_index[38].value))
+        ranks.append(int(row_index[43].value))
 
-        one = {"id":id,"name":name,"org":org,"rank":rank,"score":score,"scores":scores,"ranks":ranks}
+        descs = []
+        descs.append(str(row_index[14].value))
+        descs.append(str(row_index[21].value))
+        descs.append(str(row_index[33].value))
+        descs.append(str(row_index[39].value))
+        descs.append(str(row_index[44].value))
+
+        one = {"id":id,"name":name,"org":org,"rank":rank,"score":score,"scores":scores,"ranks":ranks,"descs":descs}
         # js = json.dumps(one, ensure_ascii=False)
         data_list.append(one)
 
 print(json.dumps(data_list, ensure_ascii=False))
 
-f1 = open('../data/rank.json','w',encoding='utf8')
-f1.write("dataFunctionCallbackRank({})".format(json.dumps(data_list, ensure_ascii=False)))
+# f1 = open('../data/ranknew.json','w',encoding='utf8')
+# f1.write("dataFunctionCallbackRank({})".format(json.dumps(data_list, ensure_ascii=False)))
 
 
 avg_list = []
@@ -71,5 +78,5 @@ for i in range(31, 37):
 total_json = {"max_list": max_list, "min_list":min_list, "avg_list":avg_list}
 print(json.dumps(total_json, ensure_ascii=False))
 
-f2 = open('../data/total.json','w',encoding='utf8')
-f2.write("dataTotalFunctionCallbackRank({})".format(json.dumps(total_json, ensure_ascii=False)))
+# f2 = open('../data/totalnew.json','w',encoding='utf8')
+# f2.write("dataTotalFunctionCallbackRank({})".format(json.dumps(total_json, ensure_ascii=False)))
